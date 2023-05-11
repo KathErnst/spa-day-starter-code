@@ -63,6 +63,16 @@ public class SpaDayController {
             }
         }
 
+        model.addAttribute("name", name);
+        model.addAttribute("skintype", skintype);
+        model.addAttribute("manipedi", manipedi);
+        model.addAttribute("facials", facials);
+        model.addAttribute("appropriateFacials", appropriateFacials);
+
         return "menu";
     }
+
+//    public String getClientProfile (@RequestParam String name, String skintype, String manipedi, Model model) {
+//
+//    }
 }
