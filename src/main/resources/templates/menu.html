@@ -14,6 +14,15 @@
     <p th:text="${manipedi}">Default: ManiPedi</p>
 </div>
 <div id = "servicesMenu">
+    <th:block>
+        <table>
+            <tr th:each = "item : ${appropriateFacials}" >
+                <td th:text=${item}></td>
+            </tr>
+
+        </table>
+
+    </th:block>
 </div>
 </body>
 </html>

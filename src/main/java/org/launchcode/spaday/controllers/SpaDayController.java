@@ -72,7 +72,4 @@ public class SpaDayController {
         return "menu";
     }
 
-//    public String getClientProfile (@RequestParam String name, String skintype, String manipedi, Model model) {
-//
-//    }
 }
