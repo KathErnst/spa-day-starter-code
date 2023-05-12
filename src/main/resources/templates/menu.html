@@ -14,14 +14,22 @@
     <p th:text="${manipedi}">Default: ManiPedi</p>
 </div>
 <div id = "servicesMenu">
+    <h3>Menu of Available Services</h3>
     <th:block>
         <table>
+            <th>Facial Treatments</th>
+            <p>The facial treatments below are recommended by our
+                estheticians for your given skin type.</p>
             <tr th:each = "item : ${appropriateFacials}" >
                 <td th:text=${item}></td>
             </tr>
-
         </table>
-
+        <div th:if = "${manipedi.equals('manicure')}" >
+             <p th:replace="fragments :: manicureDescription"></p>
+        </div>
+        <div th:if = "${manipedi.equals('pedicure')}" >
+            <p th:replace="fragments :: pedicureDescription"></p>
+        </div>
     </th:block>
 </div>
 </body>
